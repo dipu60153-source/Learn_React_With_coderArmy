@@ -1,0 +1,35 @@
+body{
+  margin: 0;
+  padding: 0;
+  block-size: border-box;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+}
+.box{
+  width: 300px;
+  height: 200px;
+  background-color:white;
+  /* display: flex; */
+  justify-content: center;
+  text-align: center;
+  /* margin-top: 60px; */
+  padding: 80px;
+}
+.but{
+  gap: 50px;
+}
+button{
+  margin: 5px;
+  width: 60px;
+  height: 50px;
+}
+
+.counter{
+  background-color: aqua;
+  width: 300px;
+  height: 150px;
+  text-align: center;
+}
