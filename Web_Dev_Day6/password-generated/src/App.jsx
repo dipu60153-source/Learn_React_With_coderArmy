@@ -1,35 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useCallback, useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [passwoed, setPassword] = useState("bsbfkjsf");
+  const [length, setLength] = useState(10);
+  const [numberChenged, setNumberChenged] = useState(false);
+  const [characterChenged, setCharacterChenged] = useState(false);
+
+  let passwordGenerated = useCallback(() => {
+    let str = "abcdefghijklmnopqrstuvxyzABCDEFGHIJKLMNOPQRSTUVXYX";
+    if (numberChenged) {
+      str += "0123456789";
+    }
+    if (characterChenged) {
+      str += "~!@#$%^&*-+?.";
+    }
+    let pass = "";
+    for (let i = 0; i < length; i++) {
+      pass += str[Math.floor(Math.random() * str.length)];
+    }
+    setPassword(pass);
+  }, [length, characterChenged, numberChenged]);
+  // function passwordGenerated() {
+
+  // }
+
+  useEffect(() => {
+    passwordGenerated();
+  }, [length, numberChenged, characterChenged]);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="pass">
+        <h1>{passwoed}</h1>
+
+        <input
+          type="range"
+          min={5}
+          max={50}
+          value={length}
+          onChange={(v) => setLength(v.target.value)}
+        />
+        <label htmlFor=""> length ({length})</label>
+
+        <input
+          type="checkbox"
+          defaultChecked={numberChenged}
+          onChange={() => setNumberChenged(!numberChenged)}
+        />
+        <label htmlFor="">Number</label>
+
+        <input
+          type="checkbox"
+          defaultChecked={characterChenged}
+          onChange={() => setCharacterChenged(!characterChenged)}
+        />
+        <label htmlFor="">Character</label>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
