@@ -24,11 +24,7 @@ function ColorFull() {
               {v}
             </button>
           ))}
-          {/* <button style={{backgroundColor:"red"}} onClick={()=>setColor("red")}>red</button>
-      <button style={{backgroundColor:"blue"}} onClick={()=>setColor("blue")}>Blue</button>
-      <button style={{backgroundColor:"orange"}} onClick={()=>setColor("orange")}>Orange</button>
-      <button style={{backgroundColor:"pink"}} onClick={()=>setColor("pink")}> Pink</button>
-      <button style={{backgroundColor:"green"}} onClick={()=>setColor("green")}>Green</button> */}
+          
         </div>
       </div>
     </>

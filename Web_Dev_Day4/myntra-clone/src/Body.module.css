@@ -1,5 +1,23 @@
-.hed1{
-    color: aqua;
-    display: flex;
-    justify-content: center;
+.card {
+  width: 200px;
+  height: 350px;
+  /*line-height: 5px;
+    */
+  border: 1px solid black;
+  text-align: center;
+  background-color: rgb(74, 232, 238);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: white;
+  margin-top: 15px;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+img {
+  width: 200px;
+  height: 200px;
 }

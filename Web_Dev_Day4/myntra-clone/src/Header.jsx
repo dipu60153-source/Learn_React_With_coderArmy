@@ -10,8 +10,9 @@ const Header = () => {
     "beauty",
     "studio",
     "contact",
+    "gjktgjgf"
   ];
-  const profile = ["profile", "whishList", "bag"];
+  const profile = ["profile", "whishList", "bag","jfhkshdfk"];
   return (
     <>
       <div className={style.Header}>

@@ -50,3 +50,11 @@
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
+button{
+    border: none;
+    background-color: white;
+}
+input{
+    border: none;
+    background-color: rgb(248, 242, 242);
+}

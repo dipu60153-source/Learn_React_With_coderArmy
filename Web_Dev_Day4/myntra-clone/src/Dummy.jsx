@@ -1,14 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./Header";
-import Body from "./Body";
-// import {Dummy, obj} from "./Dummy"
-
-function App({}) {
-  const obj = [
+ export const obj = [
     {
       cloth: "T-short",
       discount: "50-60% off",
@@ -66,35 +56,3 @@ function App({}) {
         "https://tse1.mm.bing.net/th/id/OIP.mZ8vrspjGfyWrl6nesVFAgHaHX?pid=Api&P=0&h=180",
     },
   ];
-
-  return (
-    <>
-      <Header />
-      <div
-        style={{
-          display: "flex",
-          gap: "10px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        {obj.map((v, i) => (
-          <Body
-            key={i}
-            cloth={v.cloth}
-            discount={v.discount}
-            shop={v.shop}
-            image={v.image}
-          />
-        ))}
-        {/* <Body className="card1" cloth="short" discount="60-90%" shop="shop new"/>
-     <Body cloth="T-short" discount="60-70%" shop="shop new"/>
-     <Body cloth="geans" discount="50-70%" shop="shop new"/>
-     <Body cloth="pant" discount="60-80%" shop="shop new"/>
-     <Body cloth="show" discount="60-90%" shop="shop new"/> */}
-      </div>
-    </>
-  );
-}
-
-export default App;
