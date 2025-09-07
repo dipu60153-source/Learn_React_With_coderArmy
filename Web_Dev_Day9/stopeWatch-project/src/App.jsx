@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import "./App.css";
+import { Like } from "./like";
+
 
 function App() {
   const [time, setTime] = useState(0);
@@ -40,6 +42,7 @@ function App() {
       <br />
       <br />
       <button onClick={() => Reset()}>Reset</button>
+      <Like/>
     </>
   );
 }
