@@ -1,0 +1,26 @@
+.manu{
+    width: 500px;
+    height: 100vh;
+    background-color: aqua;
+    position: fixed;
+    padding: 20px;
+    left: -600px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.manu ul li{
+    list-style: none;
+    padding: 20px;
+}
+.lis{
+    position: absolute;
+    right: 10px;
+}
+.active{
+    /* position: fixed; */
+    left: 0px;
+}
