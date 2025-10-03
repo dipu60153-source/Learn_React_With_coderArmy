@@ -5,6 +5,7 @@ export const CategoriesItem = ({manuItem}) => {
     const [isOpen,setOpen] =useState(true)
     
   return (
+    <>
     <div className="w-[800px] mx-auto my-4">
           <div className="flex justify-between items-center">
             <p className="text-[16px] font-[600] text-[#02060ceb]">
@@ -31,5 +32,6 @@ export const CategoriesItem = ({manuItem}) => {
             </div>
           )}
         </div>
+        </>
   )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { imageGridCards } from "../../Utils/SwiggyData";
-import { FoodCard } from "./FoodCard";
+import { FoodCard } from "./FoodOptionCard";
 
 export const FootOption = () => {
   return (

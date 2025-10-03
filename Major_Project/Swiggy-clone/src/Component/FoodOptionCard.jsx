@@ -1,5 +1,5 @@
 import React from "react";
-import { Like } from "./../../../../Web_Dev_Day9/stopeWatch-project/src/like";
+// import { Like } from "../../../../Web_Dev_Day9/stopeWatch-project/src/like";
 
 export const FoodCard = ({ foodData }) => {
   return (

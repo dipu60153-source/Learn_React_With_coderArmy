@@ -7,7 +7,7 @@ export const BestRestoCard = ({ ReastData }) => {
     <div className="max-w-sm flex-none shadow-2xl rounded-2xl">
       <a href={ReastData.cta.link}>
         <div className="relative">
-          <img 
+          <img
             className="w-80 h-50 object-cover rounded-2xl"
             src={
               "https://media-assets.swiggy.com/swiggy/image/upload/" +

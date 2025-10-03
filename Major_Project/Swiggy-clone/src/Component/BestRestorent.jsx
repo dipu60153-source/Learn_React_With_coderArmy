@@ -1,6 +1,6 @@
 import React from "react";
 import { DineoutRestaurants } from "../../Utils/BestRastorantData";
-import { BestRestoCard } from "./BestRestoCard";
+import { BestRestoCard } from "./BestRestorentCard";
 // import { DineoutRestaurants } from '../../Utils/BestRastorantData'
 
 export const BestRestorant = () => {

@@ -15,3 +15,6 @@ AIP Request= https://cors-anywhere.herokuapp.com/
 
 pizza hut: https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=20.2869515&lng=85.8152745&restaurantId=448941&catalog_qa=undefined&submitAction=ENTER
 
+
+search link:
+https://www.swiggy.com/dapi/menu/pl/search?lat=20.2869515&lng=85.8152745&restaurantId=448941&isMenuUx4=true&query=ta&submitAction=ENTER

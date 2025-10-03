@@ -1,55 +1,53 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faIndianRupeeSign, faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faIndianRupeeSign,
+  faStairs,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 export const CardItem = ({ cardInfo }) => {
   const [showMore, setShowMore] = useState(false);
-
   return (
     <>
       {/* main card box */}
-      <div className="flex justify-between items-start w-[800px]">
-        {/* Left side content */}
+      <div className="flex  justify-between items-start w-[800px]">
+        {/* Left side content  */}
         <div className="w-[70%] ">
-          {/* Item Name */}
-          <p className="text-[#02060cbf] text-[16px] font-[600]">
-            {cardInfo?.name || "Unnamed Item"}
+          {/* Item Name  */}
+          <p className="text-[#02060cbf] text-[16px] font-[600]  ">
+            {cardInfo?.name}{" "}
           </p>
-
-          {/* Item Price */}
+          {/* Item pries */}
           <span>
             <FontAwesomeIcon icon={faIndianRupeeSign} />
           </span>{" "}
-          <span className="text-[#02060cbf] font-[600] mt-2">
+          <span className="text-[#02060cbf]  font-[600] mt-2">
             {cardInfo?.defaultPrice
               ? cardInfo.defaultPrice / 100
-              : cardInfo?.price
-              ? cardInfo.price / 100
               : "Price not available"}
           </span>
-
           {/* Item Rating */}
           <p className="w-[552px] h-[17px] mt-3 text-[13px] flex gap-1">
-            <span className="text-green-800">
+            <span className="text-green-800 w-[px] h-[10px] ">
               <FontAwesomeIcon icon={faStar} />
             </span>
             <span>
-              {cardInfo?.ratings?.aggregatedRating?.rating ||" "} (
-              {cardInfo?.ratings?.aggregatedRating?.ratingCountV2 || 0})
+              {cardInfo?.ratings?.aggregatedRating?.rating}
+              {"(" + cardInfo?.ratings?.aggregatedRating?.ratingCountV2 + ")"}
             </span>
           </p>
-
           {/* Item Description */}
           <p
-            className={`font-[200] text-[16px] text-[#02060c99] tracking-[-0.4px] mt-3 text-sm leading-snug ${
+            className={`font-[200] text-[16px] text-[#02060c99] tracking-[-0.4px]  mt-3 text-sm  leading-snug ${
               showMore ? "" : "line-clamp-2"
             }`}
           >
-            {cardInfo?.description || " "}
+            {cardInfo?.description || "No description available"}
           </p>
-
-          {/* Show More / Less */}
-          {cardInfo?.description?.length > 150 && (
+          {/* Item Description Functionality */}
+          {cardInfo?.description && cardInfo?.description?.length > 100 && (
             <button
               className="text-green-600 text-xs font-medium mt-1"
               onClick={() => setShowMore(!showMore)}
@@ -64,18 +62,17 @@ export const CardItem = ({ cardInfo }) => {
           {/* Item img */}
           <div className="w-[156px] h-[178px]">
             <img
-              className="w-[156px] h-[144px] object-cover rounded-xl"
+              className="w-[156px] h-[144px] object-cover rounded-xl "
               src={
-                 "https://media-assets.swiggy.com/swiggy/image/upload/" +
-                    cardInfo?.imageId
-                
+                "https://media-assets.swiggy.com/swiggy/image/upload/" +
+                cardInfo.imageId
               }
-              alt={cardInfo?.name || "Food item"}
+              alt=""
             />
           </div>
 
-          {/* Add button */}
-          <button className="absolute bottom-[15px] w-[120px] h-[38px] left-5 rounded-xl text-[#1ba672] text-[18px] font-[600] bg-white px-4 py-2 shadow-xl border">
+          {/* Item add button */}
+          <button className=" absolute bottom-[15px] w-[120px] h-[38px] left-5 rounded-xl text-[#1ba672] text-[18px] font-[600]  bg-white px-4 py-2 shadow-xl border-[1px] ">
             ADD
           </button>
 
@@ -84,8 +81,7 @@ export const CardItem = ({ cardInfo }) => {
           </p>
         </div>
       </div>
-
-      <p className="text-[4px] bg-gray-300 my-5 w-full h-[1px]"></p>
+      <p className="text-[4px] bg-gray-300 my-5 w-full h-[1px] text-gray-300"></p>
     </>
   );
 };
